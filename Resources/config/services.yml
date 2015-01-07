@@ -1,0 +1,15 @@
+services:
+    newscoop_youtube_plugin.lifecyclesubscriber:
+        class: Newscoop\YoutubePluginBundle\EventListener\LifecycleSubscriber
+        arguments:
+            - @service_container
+        tags:
+            - { name: kernel.event_subscriber}
+
+    newscoop_youtube_plugin.configure_menu_listener:
+        class: Newscoop\YoutubePluginBundle\EventListener\ConfigureMenuListener
+        tags:
+          - { name: kernel.event_listener, event: newscoop_newscoop.menu_configure, method: onMenuConfigure }
+        arguments:
+            - @translator
+
