@@ -14,11 +14,20 @@ use Symfony\Component\HttpFoundation\Response;
 class YoutubeController extends Controller
 {
     /**
-     * @Route("/youtube/{name}")
-     * @Template()
+     * @Route("/youtube/{playlistId}")
      */
-    public function indexAction($name)
+    public function indexAction($playlistId)
     {
-        return array('name' => $name);
+        $templatesService = $this->container->get('newscoop.templates.service');
+        $smarty = $templatesService->getSmarty();
+        $templateDir = array_shift($smarty->getTemplateDir());
+        $templateFile = __DIR__ . "/../Resources/views/Youtube/index.html.tpl";
+        $response = new Response();
+        $response->headers->set('Content-Type', 'text/html');
+        $response->setContent($templatesService->fetchTemplate(
+            $templateFile,
+            array('playlistId' => $playlistId)
+        ));
+        return $response;
     }
 }
