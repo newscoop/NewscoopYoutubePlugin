@@ -1,0 +1,4 @@
+newscoop_youtube_plugin:
+    resource: "@NewscoopYoutubePluginBundle/Controller"
+    type:     annotation
+    prefix:   /
