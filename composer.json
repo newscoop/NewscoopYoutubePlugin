@@ -1,14 +1,14 @@
 {
     "name": "newscoop/youtube-plugin-bundle",
-    "description": "Youtube plugin for Newscoop",
+    "description": "YouTube plugin for Newscoop",
     "keywords": ["newscoop", "youtube"],
     "version": "0.0.1",
     "type": "newscoop-plugin",
     "license": "GPL-3.0",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "your.name@domain.com"
+            "name": "Mark Lewis",
+            "email": "mark.lewis@sourcefabric.org"
         }
     ],
     "require": {

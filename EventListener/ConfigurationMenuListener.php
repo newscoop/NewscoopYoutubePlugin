@@ -24,7 +24,7 @@ class ConfigureMenuListener
     {
         $menu = $event->getMenu();
         $menu[$this->translator->trans('Plugins')]->addChild(
-            'Youtube Plugin',
+            'YouTube Plugin',
             array('uri' => $event->getRouter()->generate('newscoop_youtubeplugin_admin_index'))
         );
     }

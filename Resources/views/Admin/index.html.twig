@@ -1,8 +1,8 @@
 
 {% extends 'NewscoopNewscoopBundle::admin_layout.html.twig' %}
 
-{% block admin_title %}{{ parent() }} - Youtube Admin{% endblock %}
-{% block admin_page_title_content %}Youtube Admin{% endblock %}
+{% block admin_title %}{{ parent() }} - YouTube Admin{% endblock %}
+{% block admin_page_title_content %}YouTube Admin{% endblock %}
 
 {% block admin_stylesheets %}
 <link rel="stylesheet" href="{{ asset('/bundles/newscoopnewscoop/css/jquery.dynatable.css') }}">
@@ -19,15 +19,15 @@
 <div class="plugin-container">
   <form method="post">
     <div class="form-group">
-        <label>Youtube API key</label>
+        <label>YouTube API key</label>
         <input type="text" name="apikey" size="50" value="{{ apikey }}">
     </div>
     <div class="form-group">
-        <label>Base Url</label>
+        <label>Base URL</label>
         <input type="text" name="baseurl" size="50" value="{{ baseurl }}">
     </div>
     <div class="form-group">
-        <label>Youtube Reutrn Fields</label>
+        <label>YouTube Return Fields</label>
         <input type="text" name="fields" size="50" value="{{ fields }}">
     </div>
     <input type="submit" name="submit">
